@@ -2236,7 +2236,7 @@ body.flat.ttrss_main #headlines-frame .cdm.expandable.Unread:not(.active):not(.S
 }
 body.flat.ttrss_main #headlines-frame .hl.Unread .title,
 body.flat.ttrss_main #headlines-frame .cdm.Unread .title {
-  color: #e6e6e6;
+  color: #99c3ff;
 }
 body.flat.ttrss_main #headlines-frame .hl.active > *,
 body.flat.ttrss_main #headlines-frame .hl.Selected > *,
