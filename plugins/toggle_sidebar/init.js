@@ -6,6 +6,6 @@ Plugins.Toggle_Sidebar = {
 
         const label = document.querySelector("i.toggle-sidebar-label");
 
-        label.innerHTML = Element.hidden("feeds-holder") ? 'chevron_left' : 'chevron_right';
+        label.innerHTML = Element.visible("feeds-holder") ? 'chevron_left' : 'chevron_right';
     }
 };
