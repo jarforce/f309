@@ -11,7 +11,7 @@ body.ttrss_prefs,
 }
 /* hide side bar on mobile */
 @media (max-width: 767px) {
-      .dijitTreeSidebar {
+      .dojox.layout.ExpandoPane {
         display: none;
       }
     }
