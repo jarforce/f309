@@ -813,7 +813,7 @@ const Headlines = {
 				this.initHeadlinesMenu();
 
 				if (Feeds.infscroll_disabled)
-					hsp.innerHTML = "<a href='#' onclick='Feeds.openNextUnread()'>" +
+					hsp.innerHTML = "<a href='#' onclick='window.location.href=window.location.href'>" +
 						__("Click to open next unread feed.") + "</a>";
 
 				/*
