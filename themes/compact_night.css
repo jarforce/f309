@@ -150,6 +150,7 @@ body.ttrss_main h4 {
 body.ttrss_main a {
   color: #b87d2c;
   text-decoration: none;
+  white-space: pre-line;
 }
 body.ttrss_main a:hover {
   color: #664518;
