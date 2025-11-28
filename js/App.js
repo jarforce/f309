@@ -904,7 +904,7 @@ const App = {
 			});
 	},
    updateTitle: function() {
-      let tmp = "Tiny Tiny RSS";
+      let tmp = "F309";
 
       if (this.global_unread > 0) {
          tmp = "(" + this.global_unread + ") " + tmp;
