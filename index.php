@@ -132,7 +132,7 @@
 <div id="cmdline" style="display : none"></div>
 
 <div id="main" dojoType="dijit.layout.BorderContainer">
-    <div id="feeds-holder" dojoType="dijit.layout.ContentPane" region="leading" style="width : 15%" splitter="true" class="dojox.layout.ExpandoPane">
+    <div id="feeds-holder" dojoType="dijit.layout.ContentPane" region="leading" style="width : 15%" splitter="true" class="dojox_ExpandoPane">
         <div id="feedlistLoading" class="text-center text-muted text-small">
 			  	<img class="icon-three-dots" src="images/three-dots.svg?2">
 				<?= __("Loading, please wait..."); ?>
