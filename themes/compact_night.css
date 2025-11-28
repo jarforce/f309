@@ -520,7 +520,7 @@ body.ttrss_main #feeds-holder {
   -webkit-overflow-scrolling: touch;
 }
 @media (max-width: 767px) {
-      .body.ttrss_main #feeds-holder {
+      body.ttrss_main #feeds-holder {
         display: none;
       }
     }
