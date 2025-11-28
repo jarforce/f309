@@ -1378,6 +1378,7 @@ body.ttrss_utility hr {
   max-width: 98%;
   width: auto;
   height: auto;
+  display: block;
 }
 .cdm.expanded .collapse,
 .cdm.expanded .excerpt {
