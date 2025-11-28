@@ -2195,8 +2195,7 @@ body.flat.ttrss_main #toolbar-frame #toolbar {
 body.flat.ttrss_main #feeds-holder {
   background: #222;
   box-shadow: inset -1px 0 2px -1px #666;
-  @media screen and (min-width: 768px) {
-    #title_message {
+  @media screen and (min-width: 768px) {    
         clear: both;
         display: block;
         float: left;
