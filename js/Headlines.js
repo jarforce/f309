@@ -813,7 +813,7 @@ const Headlines = {
 				this.initHeadlinesMenu();
 
 				if (Feeds.infscroll_disabled)
-					hsp.innerHTML = "<a onClick=window.location.reload(); >" +
+					hsp.innerHTML = "<a onClick='window.location.reload()'>" +
 						__("Click to open next unread feed.") + "</a>";
 
 				/*
@@ -865,7 +865,7 @@ const Headlines = {
 				this.initHeadlinesMenu();
 
 				if (Feeds.infscroll_disabled) {
-					hsp.innerHTML = "<a href='#' onclick='Feeds.openNextUnread()'>" +
+					hsp.innerHTML = "<a onClick='window.location.reload()'>" +
 						__("Click to open next unread feed.") + "</a>";
 				}
 
