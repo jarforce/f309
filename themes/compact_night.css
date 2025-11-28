@@ -9,6 +9,12 @@ body.ttrss_prefs,
   padding: 0;
   margin: 0;
 }
+/* hide side bar on mobile */
+@media (max-width: 767px) {
+      .dijitTreeSidebar {
+        display: none;
+      }
+    }
 body.ttrss_main {
   background: #333;
   color: #ccc;
@@ -2430,9 +2436,3 @@ body.ttrss_main.ttrss_index.flat .post .header .title,
 body.ttrss_main.ttrss_index.flat .cdm .title {
   font-size: 13px ! important;
 }
-/* hide side bar on mobile */
-@media (max-width: 767px) {
-      .hide-on-mobile {
-        display: none;
-      }
-    }
