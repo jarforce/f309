@@ -1264,7 +1264,7 @@ body.ttrss_utility hr {
 .cdm .header,
 .cdm .footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: nowrap;
 }
 .cdm .header img,
