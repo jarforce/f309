@@ -1157,6 +1157,7 @@ body.ttrss_utility .alert .close {
 body.ttrss_main .pull-right,
 body.ttrss_utility .pull-right {
   float: right;
+  display: none;
 }
 body.ttrss_main .pull-left,
 body.ttrss_utility .pull-left {
