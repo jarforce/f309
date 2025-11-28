@@ -2195,13 +2195,6 @@ body.flat.ttrss_main #toolbar-frame #toolbar {
 body.flat.ttrss_main #feeds-holder {
   background: #222;
   box-shadow: inset -1px 0 2px -1px #666;
-  @media screen and (min-width: 768px) {    
-        clear: both;
-        display: block;
-        float: left;
-        margin: 10px auto 5px 20px;
-        width: 28%;
-    }
 }
 body.flat.ttrss_main #feeds-holder #feedTree .dijitTreeRow .counterNode.aux,
 body.flat.ttrss_main #feeds-holder #feedTree .dijitTreeRow .counterNode.marked,
@@ -2437,3 +2430,9 @@ body.ttrss_main.ttrss_index.flat .post .header .title,
 body.ttrss_main.ttrss_index.flat .cdm .title {
   font-size: 13px ! important;
 }
+/* hide side bar on mobile */
+@media (max-width: 767px) {
+      .hide-on-mobile {
+        display: none;
+      }
+    }
