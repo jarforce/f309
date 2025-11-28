@@ -743,6 +743,7 @@ body.ttrss_main #headlines-frame .feed-title a.title {
 }
 body.ttrss_main #headlines-frame .feed-title a {
   color: #ccc;
+  display: none;
 }
 body.ttrss_main #headlines-frame .feed-title a:hover {
   color: #b87d2c;
