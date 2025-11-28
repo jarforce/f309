@@ -111,7 +111,7 @@
 
 <div class="container">
 
-	<h1><?= "Authentication" ?></h1>
+	<h1><?= "Login" ?></h1>
 	<div class="content">
 		<form action="public.php?return=<?= $return ?>"
 			  dojoType="dijit.form.Form" method="POST">
@@ -146,13 +146,13 @@
 					value="<?= $_SESSION["fake_password"] ?? "" ?>"/>
 			</fieldset>
 			<?php if (!Config::get(Config::DISABLE_LOGIN_FORM) && str_contains(Config::get(Config::PLUGINS), "auth_internal")) { ?>
-				<fieldset class="align-right">
+				<fieldset class="align-right" style="display:none">
 					<a href="public.php?op=forgotpass"><?= __("I forgot my password") ?></a>
 				</fieldset>
 			<?php } ?>
 
 			<?php if (!Config::get(Config::DISABLE_LOGIN_FORM)) { ?>
-				<fieldset>
+				<fieldset style="display:none">
 					<label><?= __("Profile:") ?></label>
 
 					<select disabled='disabled' name="profile" id="profile" dojoType='dijit.form.Select'>
@@ -160,7 +160,7 @@
 					</select>
 				</fieldset>
 
-				<fieldset class="narrow">
+				<fieldset class="narrow" style="display:none">
 					<label> </label>
 
 					<label id="bw_limit_label">
@@ -173,7 +173,7 @@
 					<?= __("Does not display images in articles, reduces automatic refreshes."); ?>
 				</div>
 
-				<fieldset class="narrow">
+				<fieldset class="narrow" style="display:none">
 					<label> </label>
 
 					<label id="safe_mode_label">
@@ -187,7 +187,7 @@
 				</div>
 
 				<?php if (Config::get(Config::SESSION_COOKIE_LIFETIME) > 0) { ?>
-					<fieldset class="narrow">
+					<fieldset class="narrow" style="display:none">
 						<label> </label>
 						<label>
 							<?= \Controls\checkbox_tag("remember_me") ?>
@@ -211,7 +211,7 @@
 	</div>
 
 	<div class="footer">
-		<a href="https://github.com/tt-rss/tt-rss">Tiny Tiny RSS</a>
+		<a href="https://f309.com">F309</a>
 	</div>
 
 </div>
