@@ -2195,6 +2195,14 @@ body.flat.ttrss_main #toolbar-frame #toolbar {
 body.flat.ttrss_main #feeds-holder {
   background: #222;
   box-shadow: inset -1px 0 2px -1px #666;
+  @media screen and (min-width: 768px) {
+    #title_message {
+        clear: both;
+        display: block;
+        float: left;
+        margin: 10px auto 5px 20px;
+        width: 28%;
+    }
 }
 body.flat.ttrss_main #feeds-holder #feedTree .dijitTreeRow .counterNode.aux,
 body.flat.ttrss_main #feeds-holder #feedTree .dijitTreeRow .counterNode.marked,
