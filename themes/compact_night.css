@@ -1379,6 +1379,7 @@ body.ttrss_utility hr {
   width: auto;
   height: auto;
   display: block;
+  margin: auto;
 }
 .cdm.expanded .collapse,
 .cdm.expanded .excerpt {
