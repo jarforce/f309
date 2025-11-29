@@ -9,6 +9,9 @@ body.ttrss_prefs,
   padding: 0;
   margin: 0;
 }
+.attachments {
+  display : none;
+}
 body.ttrss_main {
   background: #333;
   color: #ccc;
