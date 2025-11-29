@@ -519,8 +519,7 @@ body.ttrss_main #feeds-holder {
   box-shadow: inset -1px 0 2px -1px rgba(0, 0, 0, 0.1);
   -webkit-overflow-scrolling: touch;
 }
-@media (max-width: 767px) {
-      body.ttrss_main #toolbar-frame #toolbar #toolbar-headlines,
+@media (max-width: 767px) {      
       body.flat.ttrss_main #toolbar-frame #toolbar,
       body.ttrss_main #feeds-holder {
         display: none;
