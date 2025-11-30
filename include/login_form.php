@@ -95,7 +95,7 @@
             }
 	    },
         gotoRegForm: function() {
-        	window.location.href = "register.php";
+        	window.location.href = "index.php";
         	return false;
     	},
         bwLimitChange: function(elem) {
@@ -147,7 +147,7 @@
 			</fieldset>
 			<?php if (!Config::get(Config::DISABLE_LOGIN_FORM) && str_contains(Config::get(Config::PLUGINS), "auth_internal")) { ?>
 				<fieldset class="align-right" style="display:none">
-					<a href="public.php?op=forgotpass"><?= __("I forgot my password") ?></a>
+					<a href="index.php"><?= __("I forgot my password") ?></a>
 				</fieldset>
 			<?php } ?>
 
