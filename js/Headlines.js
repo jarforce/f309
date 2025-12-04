@@ -877,10 +877,10 @@ const Headlines = {
 
 				if (hsp) {
 					if (first_id_changed) {
-						hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
+						hsp.innerHTML = "<a onClick='window.location.reload()'>" +
 							__("New articles found, reload feed to continue.") + "</a>";
 					} else {
-						hsp.innerHTML = "<a href='#' onclick='Feeds.openNextUnread()'>" +
+						hsp.innerHTML = "<a onClick='window.location.reload()'>" +
 							__("Click to open next unread feed.") + "</a>";
 					}
 				}
