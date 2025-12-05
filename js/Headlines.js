@@ -634,7 +634,7 @@ const Headlines = {
 				<span class='left'>
 					<a href="#" title="${__("Show as feed")}"
 						onclick='CommonDialogs.generatedFeed("${headlines.id}", ${headlines.is_cat}, ${JSON.stringify(search_query)})'>
-						<i class='icon-syndicate material-icons'>rss_feed</i>
+						<i class='pub-pic pub-70250 material-icons'>rss_feed</i>
 					</a>
 					${tb.site_url ?
 						`<a class="feed_title" target="_blank" href="${App.escapeHtml(App.sanitizeUrl(tb.site_url))}" title="${tb.last_updated}">${tb.title}</a>` :
