@@ -1383,8 +1383,8 @@ body.ttrss_utility hr {
 }
 .cdm .content-inner iframe {
   max-width: 98%;
-  width: auto;
-  height: auto;
+  width: 98%;
+  height: 600px;
 }
 .cdm .content-inner img,
 .cdm .content-inner video {
