@@ -206,6 +206,7 @@ const Headlines = {
 
 			if (feeds.length > 0) {
 				Feeds.requestCounters(feeds, labels);
+				Feeds.reloadCurrent();
 			}
 
 			PluginHost.run(PluginHost.HOOK_HEADLINE_MUTATIONS_SYNCED, results);
