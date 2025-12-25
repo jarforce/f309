@@ -211,7 +211,7 @@
 	</div>
 
 	<div class="footer">
-		<p>F309</p>
+		F309
 	</div>
 
 </div>
