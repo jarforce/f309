@@ -814,8 +814,7 @@ const Headlines = {
 				if (Feeds.infscroll_disabled)
 					//hsp.innerHTML = "<a onclick='window.location.reload()'>" +
 					//	__("Click to open next unread feed.") + "</a>";					
-					hsp.innerHTML = "<a onClick: function() {
-						Feeds.catchupFeed(this.getParent().row_id);}>" +
+					hsp.innerHTML = "<a href='#' onclick='Feeds.catchupFeed(this.getParent().row_id)'>" +
 						__("Click to open next unread feed.") + "</a>";
 				/*
 				if (Feeds._search_query) {
