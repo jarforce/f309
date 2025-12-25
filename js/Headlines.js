@@ -812,7 +812,7 @@ const Headlines = {
 				this.initHeadlinesMenu();
 
 				if (Feeds.infscroll_disabled)
-					hsp.innerHTML = "<a onclick='Feeds.reloadCurrent()'>" +
+					hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
 						__("Click to open next unread feed.") + "</a>";		
 				/*
 				if (Feeds._search_query) {
@@ -864,7 +864,7 @@ const Headlines = {
 
 				if (Feeds.infscroll_disabled) {
 					//hsp.innerHTML = "<a onclick='window.location.reload()'>" +
-					hsp.innerHTML = "<a onclick='Feeds.reloadCurrent()'>" +
+					hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
 						__("Click to open next unread feed.") + "</a>";						
 				}
 
@@ -876,10 +876,10 @@ const Headlines = {
 
 				if (hsp) {
 					if (first_id_changed) {
-						hsp.innerHTML = "<a onclick='Feeds.reloadCurrent()'>" +
+						hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
 							__("New articles found, reload feed to continue.") + "</a>";
 					} else {
-						hsp.innerHTML = "<a onclick='Feeds.reloadCurrent()'>" +
+						hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
 							__("Click to open next unread feed.") + "</a>";	
 					}
 				}
