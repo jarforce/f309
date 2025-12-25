@@ -111,7 +111,7 @@
 
 <div class="container">
 
-	<h1><?= "Login" ?></h1>
+	<h1><?= "Welcome" ?></h1>
 	<div class="content">
 		<form action="public.php?return=<?= $return ?>"
 			  dojoType="dijit.form.Form" method="POST">
@@ -211,7 +211,7 @@
 	</div>
 
 	<div class="footer">
-		<a href="https://f309.com">F309</a>
+		<a href="#">F309</a>
 	</div>
 
 </div>
