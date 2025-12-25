@@ -814,9 +814,7 @@ const Headlines = {
 				if (Feeds.infscroll_disabled)
 					hsp.innerHTML = "<a onclick='window.location.reload()'>" +
 						__("Click to open next unread feed.") + "</a>";					
-				window.addEventListener('scroll', function() {      
-      			location.reload(); // Reloads the current page
-    			})
+				
 				/*
 				if (Feeds._search_query) {
 					document.getElementById("feed_title").innerHTML += "<span id='cancel_search'>" +
@@ -867,10 +865,7 @@ const Headlines = {
 
 				if (Feeds.infscroll_disabled) {
 					hsp.innerHTML = "<a onclick='window.location.reload()'>" +
-						__("Click to open next unread feed.") + "</a>";	
-					window.addEventListener('scroll', function() {      
-      				location.reload(); // Reloads the current page
-    				})
+						__("Click to open next unread feed.") + "</a>";						
 				}
 
 			} else {
@@ -882,16 +877,10 @@ const Headlines = {
 				if (hsp) {
 					if (first_id_changed) {
 						hsp.innerHTML = "<a onclick='window.location.reload()'>" +
-							__("New articles found, reload feed to continue.") + "</a>";	
-						window.addEventListener('scroll', function() {      
-      					location.reload(); // Reloads the current page
-    					})
+							__("New articles found, reload feed to continue.") + "</a>";
 					} else {
 						hsp.innerHTML = "<a onclick='window.location.reload()'>" +
-							__("Click to open next unread feed.") + "</a>";		
-						window.addEventListener('scroll', function() {      
-      					location.reload(); // Reloads the current page
-    					})
+							__("Click to open next unread feed.") + "</a>";	
 					}
 				}
 			}
