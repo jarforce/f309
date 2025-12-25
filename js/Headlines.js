@@ -355,7 +355,12 @@ const Headlines = {
 					}
 				}
 			}
+			if (document.getElementById("feed_current_unread")) {
+				const feed_unread = Feeds.getUnread(Feeds.getActive(), Feeds.activeIsCat());
 
+				Headlines.loadMore();
+				return;
+			}
 			if (App.isCombinedMode() && App.getInitParam("cdm_expanded")) {
 				const container = document.getElementById("headlines-frame")
 
