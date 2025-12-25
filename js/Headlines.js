@@ -811,11 +811,9 @@ const Headlines = {
 
 				this.initHeadlinesMenu();
 
-				if (Feeds.infscroll_disabled)
-					Feeds.reloadCurrent();
-					exit;
-					//hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
-					//	__("Click to open next unread feed.") + "</a>";		
+				if (Feeds.infscroll_disabled)					
+					hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
+						__("Click to open next unread feed.") + "</a>";		
 				/*
 				if (Feeds._search_query) {
 					document.getElementById("feed_title").innerHTML += "<span id='cancel_search'>" +
@@ -865,11 +863,9 @@ const Headlines = {
 				this.initHeadlinesMenu();
 
 				if (Feeds.infscroll_disabled) {
-					//hsp.innerHTML = "<a onclick='window.location.reload()'>" +
-					Feeds.reloadCurrent();
-					exit;
-					//hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
-					//	__("Click to open next unread feed.") + "</a>";						
+					//hsp.innerHTML = "<a onclick='window.location.reload()'>" +					
+					hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
+						__("Click to open next unread feed.") + "</a>";						
 				}
 
 			} else {
@@ -879,16 +875,12 @@ const Headlines = {
 				const hsp = document.getElementById("headlines-spacer");
 
 				if (hsp) {
-					if (first_id_changed) {
-						Feeds.reloadCurrent();
-						exit;
-						//hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
-						//	__("New articles found, reload feed to continue.") + "</a>";
+					if (first_id_changed) {						
+						hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
+							__("New articles found, reload feed to continue.") + "</a>";
 					} else {
-						Feeds.reloadCurrent();
-						exit;
-						//hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
-						//	__("Click to open next unread feed.") + "</a>";	
+						hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
+							__("Click to open next unread feed.") + "</a>";	
 					}
 				}
 			}
