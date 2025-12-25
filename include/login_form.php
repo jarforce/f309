@@ -211,7 +211,7 @@
 	</div>
 
 	<div class="footer">
-		<a href="#">F309</a>
+		<p>F309</p>
 	</div>
 
 </div>
