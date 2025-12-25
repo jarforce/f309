@@ -354,10 +354,7 @@ const Headlines = {
 						return;
 					}
 				}
-			}
-			if (document.getElementById("feed_current_unread")) {				
-				Headlines.loadMore();				
-			}
+			}			
 			if (App.isCombinedMode() && App.getInitParam("cdm_expanded")) {
 				const container = document.getElementById("headlines-frame")
 
@@ -612,8 +609,7 @@ const Headlines = {
 
 			if (feed_unread > 0 && !Element.visible("feeds-holder")) {
 				document.getElementById("feed_current_unread").innerText = feed_unread;
-				Element.show("feed_current_unread");
-				Headlines.loadMore();
+				Element.show("feed_current_unread");				
 			} else {
 				Element.hide("feed_current_unread");
 			}
