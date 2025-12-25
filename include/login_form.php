@@ -111,7 +111,7 @@
 
 <div class="container">
 
-	<h1><?= "Welcome" ?></h1>
+	<h1><?= "Tal" ?></h1>
 	<div class="content">
 		<form action="public.php?return=<?= $return ?>"
 			  dojoType="dijit.form.Form" method="POST">
