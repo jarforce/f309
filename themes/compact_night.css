@@ -15,9 +15,9 @@ body.ttrss_prefs,
 }
 body.ttrss_main {
   background: #333;
-  color: #ccc;
+  color: #b7b3b3;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden;
   /* ul.compact {
 		list-style-type : none;
@@ -42,7 +42,7 @@ body.ttrss_main .post {
 }
 body.ttrss_main .post .header {
   padding: 5px;
-  color: #ccc;
+  color: #b7b3b3;
   border: 0 solid #222;
   border-bottom-width: 1px;
   background: #222;
@@ -275,7 +275,7 @@ body.ttrss_main .hl .title {
 }
 body.ttrss_main .hl .author {
   white-space: nowrap;
-  color: #ccc;
+  color: #b7b3b3;
   font-size: 11px;
   font-weight: normal;
 }
@@ -286,13 +286,13 @@ body.ttrss_main .hl .feed a {
   font-size: 11px;
   font-style: italic;
   font-weight: normal;
-  color: #ccc;
+  color: #b7b3b3;
 }
 body.ttrss_main .hl .feed a:hover {
   color: #b87d2c;
 }
 body.ttrss_main .hl .updated {
-  color: #ccc;
+  color: #b7b3b3;
   text-align: right;
   font-size: 11px;
   padding-left: 10px;
@@ -345,9 +345,9 @@ body.ttrss_main #content-insert blockquote,
 body.ttrss_main #headlines-frame blockquote,
 body.ttrss_main .dijitContentPane blockquote {
   margin: 5px 0;
-  color: #ccc;
+  color: #b7b3b3;
   padding-left: 10px;
-  border: 0 solid #ccc;
+  border: 0 solid #b7b3b3;
   border-left-width: 4px;
 }
 body.ttrss_main #content-insert code,
@@ -361,10 +361,10 @@ body.ttrss_main #headlines-frame pre,
 body.ttrss_main .dijitContentPane pre {
   margin: 5px 0;
   padding: 10px;
-  color: #ccc;
+  color: #b7b3b3;
   font-family: monospace;
   font-size: 12px;
-  border: 0 solid #ccc;
+  border: 0 solid #b7b3b3;
   background: #222;
   display: block;
   max-width: 98%;
@@ -372,7 +372,7 @@ body.ttrss_main .dijitContentPane pre {
   white-space: pre-wrap;
 }
 body.ttrss_main div.prefHelp {
-  color: #ccc;
+  color: #b7b3b3;
   padding: 5px;
 }
 body.ttrss_main span.preview {
@@ -386,7 +386,7 @@ body.ttrss_main .label {
   vertical-align: middle;
   background-color: #fff7d5;
   font-size: 9px;
-  color: #ccc;
+  color: #b7b3b3;
   font-weight: normal;
   margin-left: 2px;
   padding: 2px 4px;
@@ -395,7 +395,7 @@ body.ttrss_main .label {
 body.ttrss_main i.marked-pic,
 body.ttrss_main i.pub-pic {
   cursor: pointer;
-  color: #ccc;
+  color: #b7b3b3;
 }
 body.ttrss_main #overlay {
   background: #333;
@@ -423,7 +423,7 @@ body.ttrss_main .dijitDialog .dlgSec,
 body.ttrss_main .dijitDialog .dlgSecHoriz {
   font-size: 16px;
   font-weight: 600;
-  color: #ccc;
+  color: #b7b3b3;
   font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body.ttrss_main .dijitDialog section,
@@ -495,7 +495,7 @@ body.ttrss_main div#cmdline {
   left: 5px;
   bottom: 5px;
   font-size: 11px;
-  color: #ccc;
+  color: #b7b3b3;
   font-weight: bold;
   background-color: #333;
   border: 1px solid #b87d2c;
@@ -610,7 +610,7 @@ body.ttrss_main #feeds-holder #feedTree .dijitTreeNode .dijitTreeRow.dijitTreeRo
   box-shadow: -1px 0 2px -1px rgba(0, 0, 0, 0.1);
   border-color: #222 transparent;
   background: #333;
-  color: #ccc;
+  color: #b7b3b3;
 }
 body.ttrss_main #feeds-holder #feedTree .dijitTreeNode .dijitTreeRow .dijitIcon.feed-icon {
   margin-right: 2px;
@@ -730,12 +730,12 @@ body.ttrss_main #headlines-frame[data-is-wide-screen="true"] .hl .feed {
 body.ttrss_main #headlines-frame #headlines-spacer {
   margin-left: 1px;
   text-align: center;
-  color: #ccc;
+  color: #b7b3b3;
   font-size: 11px;
 }
 body.ttrss_main #headlines-frame #headlines-spacer a,
 body.ttrss_main #headlines-frame #headlines-spacer span {
-  color: #ccc;
+  color: #b7b3b3;
   padding: 10px;
   display: block;
 }
@@ -747,11 +747,11 @@ body.ttrss_main #headlines-frame .feed-title {
   border-bottom-width: 1px; 
 }
 body.ttrss_main #headlines-frame .feed-title a.title {
-  color: #ccc;
+  color: #b7b3b3;
   font-weight: bold;
 }
 body.ttrss_main #headlines-frame .feed-title a {
-  color: #ccc;
+  color: #b7b3b3;
   display: none;
 }
 body.ttrss_main #headlines-frame .feed-title a:hover {
@@ -781,7 +781,7 @@ body.ttrss_main #toolbar-frame #toolbar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  color: #ccc;
+  color: #b7b3b3;
   font-size: 13px;
   align-items: center;
 }
@@ -859,7 +859,7 @@ body.ttrss_main #toolbar-frame #toolbar #selected_prompt {
 }
 body.ttrss_main #header {
   text-align: right;
-  color: #ccc;
+  color: #b7b3b3;
   padding: 5px 5px 0 0;
   position: absolute;
   border: 0;
@@ -951,7 +951,7 @@ body.ttrss_main span.highlight {
   color: #cc90cc;
 }
 body.ttrss_main #feedEditDlg img.feedIcon {
-  border: 1px solid #ccc;
+  border: 1px solid #b7b3b3;
   padding: 5px;
   margin: 5px;
   max-width: 20px;
@@ -1252,7 +1252,7 @@ body.ttrss_utility .alert-info h4 {
 }
 body.ttrss_main hr,
 body.ttrss_utility hr {
-  border: 0 solid #ccc;
+  border: 0 solid #b7b3b3;
   border-bottom-width: 1px;
 }
 ::selection {
@@ -1319,7 +1319,7 @@ body.ttrss_utility hr {
   width: 0;
 }
 .cdm .header .updated {
-  color: #ccc;
+  color: #b7b3b3;
   font-weight: normal;
   font-size: 11px;
   white-space: nowrap;
@@ -1335,11 +1335,11 @@ body.ttrss_utility hr {
   border-radius: 4px;
   padding: 1px 4px;
   margin-right: 4px;
-  color: #ccc;
+  color: #b7b3b3;
 }
 .cdm .header .author {
   white-space: nowrap;
-  color: #ccc;
+  color: #b7b3b3;
   font-size: 11px;
   font-weight: normal;
 }
@@ -1347,7 +1347,7 @@ body.ttrss_utility hr {
   height: 30px;
   padding-left: 5px;
   font-weight: normal;
-  color: #ccc;
+  color: #b7b3b3;
   clear: both;
   align-items: center;
 }
@@ -1430,7 +1430,7 @@ body.ttrss_utility hr {
   color: black;
 }
 .cdm.expanded .content {
-  color: #ccc;
+  color: #b7b3b3;
 }
 .cdm.vgrlf .feed {
   display: none;
@@ -1440,11 +1440,11 @@ body.ttrss_utility hr {
   border-bottom-width: 1px;  
 }
 .cdm .feed-title a.title {
-  color: #ccc;
+  color: #b7b3b3;
   font-weight: bold;
 }
 .cdm .feed-title a {
-  color: #ccc;
+  color: #b7b3b3;
 }
 .cdm .feed-title a:hover {
   color: #b87d2c;
@@ -1505,7 +1505,7 @@ body.ttrss_utility hr {
 }
 .cdm.expandable .header a.title {
   font-weight: 600;
-  color: #ccc;
+  color: #b7b3b3;
   font-size: 14px;
   transition: color 0.2s, background 0.2s;
   text-rendering: optimizelegibility;
@@ -1554,7 +1554,7 @@ body.ttrss_prefs h3,
 body.ttrss_prefs h4 {
   font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 600;
-  color: #ccc;
+  color: #b7b3b3;
 }
 body.ttrss_prefs select[multiple="multiple"] option {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1753,7 +1753,7 @@ body.ttrss_prefs .event-log tr .filename {
 body.ttrss_prefs .event-log tr .filename,
 body.ttrss_prefs .event-log tr .login,
 body.ttrss_prefs .event-log tr .timestamp {
-  color: #ccc;
+  color: #b7b3b3;
 }
 body.ttrss_prefs hr {
   border-color: #222;
@@ -1764,7 +1764,7 @@ body.ttrss_prefs .phpinfo table {
 }
 body.ttrss_prefs .phpinfo td.e,
 body.ttrss_prefs .phpinfo td.v {
-  border: 1px solid #ccc;
+  border: 1px solid #b7b3b3;
 }
 body.ttrss_prefs .phpinfo td.e {
   font-weight: bold;
@@ -1964,7 +1964,7 @@ body.ttrss_prefs[hide-filter-rules="true"] ul.actions_summary li:last-child:afte
   text-overflow: ellipsis;
 }
 .flat label.dijitButton {
-  border: 1px solid #ccc;
+  border: 1px solid #b7b3b3;
   padding: 6px;
   border-radius: 4px;
   cursor: pointer;
@@ -1977,7 +1977,7 @@ body.ttrss_prefs[hide-filter-rules="true"] ul.actions_summary li:last-child:afte
 .flat .dijitTree .dijitTreeNode .dijitTreeRow {
   padding: 4px 0;
   border-width: 1px;
-  color: #ccc;
+  color: #b7b3b3;
 }
 .flat .dijitDialog {
   width: 600px;
@@ -2018,7 +2018,7 @@ body.ttrss_utility.sanity_failed {
 }
 body.ttrss_utility {
   background: #222;
-  color: #ccc;
+  color: #b7b3b3;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   margin: 4em;
@@ -2129,7 +2129,7 @@ body.ttrss_zoom div.post div.header {
   border-bottom-width: 1px;
   background: #333;
   font-size: 13px;
-  color: #ccc;
+  color: #b7b3b3;
 }
 body.ttrss_zoom div.post div.header .row {
   display: flex;
@@ -2156,7 +2156,7 @@ body.ttrss_zoom div.post .content video {
 }
 body.ttrss_zoom div.post .content blockquote {
   margin: 5px 0;
-  color: #ccc;
+  color: #b7b3b3;
   padding-left: 8px;
   border: 0 solid #222;
   border-left-width: 4px;
@@ -2168,10 +2168,10 @@ body.ttrss_zoom div.post .content code {
 }
 body.ttrss_zoom div.post .content pre {
   padding: 8px;
-  color: #ccc;
+  color: #b7b3b3;
   font-family: monospace;
   font-size: 12px;
-  border: 0 solid #ccc;
+  border: 0 solid #b7b3b3;
   background: #222;
   display: block;
   max-width: 98%;
@@ -2200,7 +2200,7 @@ body.flat.ttrss_main a:hover {
 }
 body.flat.ttrss_main #main,
 body.flat.ttrss_main #overlay {
-  color: #ccc;
+  color: #b7b3b3;
   background: #333;
 }
 body.flat.ttrss_main #toolbar-frame #toolbar {
@@ -2215,7 +2215,7 @@ body.flat.ttrss_main #feeds-holder #feedTree .dijitTreeRow .counterNode.aux,
 body.flat.ttrss_main #feeds-holder #feedTree .dijitTreeRow .counterNode.marked,
 body.flat.ttrss_main #feeds-holder #feedTree .dijitTreeRow .counterNode.published {
   background: #222;
-  color: #ccc;
+  color: #b7b3b3;
   border-color: #333;
 }
 body.flat.ttrss_main #feeds-holder #feedTree .dijitTreeRow .counterNode.marked {
@@ -2289,11 +2289,11 @@ body.flat.ttrss_main #headlines-frame .cdm.expandable.active {
 }
 body.flat.ttrss_main #headlines-frame .hl,
 body.flat.ttrss_main #headlines-frame .cdm {
-  color: #ccc;
+  color: #b7b3b3;
 }
 body.flat.ttrss_main #headlines-frame .hl .title,
 body.flat.ttrss_main #headlines-frame .cdm .title {
-  color: #ccc;
+  color: #b7b3b3;
 }
 body.flat.ttrss_main #headlines-frame .hl .author,
 body.flat.ttrss_main #headlines-frame .cdm .author {
@@ -2303,7 +2303,7 @@ body.flat.ttrss_main #headlines-frame .hl .updated,
 body.flat.ttrss_main #headlines-frame .cdm .updated,
 body.flat.ttrss_main #headlines-frame .hl .content,
 body.flat.ttrss_main #headlines-frame .cdm .content {
-  color: #ccc;
+  color: #b7b3b3;
 }
 body.flat.ttrss_main #headlines-frame .hl .feed a,
 body.flat.ttrss_main #headlines-frame .cdm .feed a {
@@ -2311,7 +2311,7 @@ body.flat.ttrss_main #headlines-frame .cdm .feed a {
 }
 body.flat.ttrss_main #headlines-frame .cdm .footer {
   border-color: #222;
-  color: #ccc;
+  color: #b7b3b3;
 }
 body.flat.ttrss_main #headlines-frame .left i.material-icons,
 body.flat.ttrss_main #headlines-frame .left .dijitCheckBox {
@@ -2376,11 +2376,11 @@ body.flat.ttrss_main .dijitDialog .panel {
 }
 body.flat.ttrss_main #headlines-frame blockquote,
 body.flat.ttrss_main #content-insert blockquote {
-  color: #ccc;
+  color: #b7b3b3;
   border-color: #b87d2c;
 }
 body.flat.ttrss_main pre {
-  color: #ccc;
+  color: #b7b3b3;
   background: #222 ! important;
 }
 body.flat.ttrss_main ul#filterDlg_Matches,
