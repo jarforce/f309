@@ -812,9 +812,11 @@ const Headlines = {
 				this.initHeadlinesMenu();
 
 				if (Feeds.infscroll_disabled)
-					hsp.innerHTML = "<a onScroll='window.location.reload()'>" +
-						__("Click to open next unread feed.") + "</a>";					
-
+				//	hsp.innerHTML = "<a onScroll='window.location.reload()'>" +
+				//		__("Click to open next unread feed.") + "</a>";					
+				window.addEventListener('scroll', function() {      
+      			location.reload(); // Reloads the current page
+    			})
 				/*
 				if (Feeds._search_query) {
 					document.getElementById("feed_title").innerHTML += "<span id='cancel_search'>" +
@@ -864,8 +866,11 @@ const Headlines = {
 				this.initHeadlinesMenu();
 
 				if (Feeds.infscroll_disabled) {
-					hsp.innerHTML = "<a onScroll='window.location.reload()'>" +
-						__("Click to open next unread feed.") + "</a>";					
+					//hsp.innerHTML = "<a onScroll='window.location.reload()'>" +
+					//	__("Click to open next unread feed.") + "</a>";	
+					window.addEventListener('scroll', function() {      
+      				location.reload(); // Reloads the current page
+    				})
 				}
 
 			} else {
@@ -876,11 +881,17 @@ const Headlines = {
 
 				if (hsp) {
 					if (first_id_changed) {
-						hsp.innerHTML = "<a onScroll='window.location.reload()'>" +
-							__("New articles found, reload feed to continue.") + "</a>";						
+						//hsp.innerHTML = "<a onScroll='window.location.reload()'>" +
+						//	__("New articles found, reload feed to continue.") + "</a>";	
+						window.addEventListener('scroll', function() {      
+      					location.reload(); // Reloads the current page
+    					})
 					} else {
-						hsp.innerHTML = "<a onScroll='window.location.reload()'>" +
-							__("Click to open next unread feed.") + "</a>";						
+						//hsp.innerHTML = "<a onScroll='window.location.reload()'>" +
+						//	__("Click to open next unread feed.") + "</a>";		
+						window.addEventListener('scroll', function() {      
+      					location.reload(); // Reloads the current page
+    					})
 					}
 				}
 			}
