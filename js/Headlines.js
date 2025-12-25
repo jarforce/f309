@@ -813,6 +813,7 @@ const Headlines = {
 
 				if (Feeds.infscroll_disabled)
 					Feeds.reloadCurrent();
+					break;
 					//hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
 					//	__("Click to open next unread feed.") + "</a>";		
 				/*
@@ -866,6 +867,7 @@ const Headlines = {
 				if (Feeds.infscroll_disabled) {
 					//hsp.innerHTML = "<a onclick='window.location.reload()'>" +
 					Feeds.reloadCurrent();
+					break;
 					//hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
 					//	__("Click to open next unread feed.") + "</a>";						
 				}
@@ -879,10 +881,12 @@ const Headlines = {
 				if (hsp) {
 					if (first_id_changed) {
 						Feeds.reloadCurrent();
+						break;
 						//hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
 						//	__("New articles found, reload feed to continue.") + "</a>";
 					} else {
 						Feeds.reloadCurrent();
+						break;
 						//hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
 						//	__("Click to open next unread feed.") + "</a>";	
 					}
