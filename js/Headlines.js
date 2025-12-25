@@ -347,7 +347,7 @@ const Headlines = {
 
 					// invoke lazy load if last article in buffer is nearly visible OR is active
 					if (Article.getActive() === parseInt(last_row.getAttribute('data-article-id'))
-						|| last_row.offsetTop - 1000 <= container.scrollTop + container.offsetHeight) {
+						|| last_row.offsetTop - 250 <= container.scrollTop + container.offsetHeight) {
 						hsp.innerHTML = `<span class='text-muted text-small text-center'><img class="icon-three-dots" src="${App.getInitParam('icon_three_dots')}"> ${__("Loading, please wait...")}</span>`;
 
 						Headlines.loadMore();
@@ -611,6 +611,7 @@ const Headlines = {
 			if (feed_unread > 0 && !Element.visible("feeds-holder")) {
 				document.getElementById("feed_current_unread").innerText = feed_unread;
 				Element.show("feed_current_unread");
+				Headlines.loadMore();
 			} else {
 				Element.hide("feed_current_unread");
 			}
