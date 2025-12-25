@@ -812,9 +812,11 @@ const Headlines = {
 				this.initHeadlinesMenu();
 
 				if (Feeds.infscroll_disabled)
-					hsp.innerHTML = "<a onclick='window.location.reload()'>" +
-						__("Click to open next unread feed.") + "</a>";					
-				
+					//hsp.innerHTML = "<a onclick='window.location.reload()'>" +
+					//	__("Click to open next unread feed.") + "</a>";					
+					hsp.innerHTML = "<a onClick: function() {
+						Feeds.catchupFeed(this.getParent().row_id);}>" +
+						__("Click to open next unread feed.") + "</a>";
 				/*
 				if (Feeds._search_query) {
 					document.getElementById("feed_title").innerHTML += "<span id='cancel_search'>" +
