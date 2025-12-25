@@ -868,9 +868,7 @@ const Headlines = {
 
 				if (Feeds.infscroll_disabled) {
 					hsp.innerHTML = "<a onClick='window.location.reload()'>" +
-						__("Click to open next unread feed.") + "</a>";
-					Headlines.loadMore();
-					return;
+						__("Click to open next unread feed.") + "</a>";					
 				}
 
 			} else {
@@ -882,14 +880,10 @@ const Headlines = {
 				if (hsp) {
 					if (first_id_changed) {
 						hsp.innerHTML = "<a onClick='window.location.reload()'>" +
-							__("New articles found, reload feed to continue.") + "</a>";
-						Headlines.loadMore();
-						return;
+							__("New articles found, reload feed to continue.") + "</a>";						
 					} else {
 						hsp.innerHTML = "<a onClick='window.location.reload()'>" +
-							__("Click to open next unread feed.") + "</a>";
-						Headlines.loadMore();
-						return;
+							__("Click to open next unread feed.") + "</a>";						
 					}
 				}
 			}
