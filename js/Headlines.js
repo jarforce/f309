@@ -344,14 +344,7 @@ const Headlines = {
 
 				if (hsp && hsp.previousSibling) {
 					const last_row = hsp.previousSibling;
-				if (document.getElementById("feed_current_unread")) {
-					const feed_unread = Feeds.getUnread(Feeds.getActive(), Feeds.activeIsCat());
-
-					if (feed_unread > 0 && !Element.visible("feeds-holder")) {
-					document.getElementById("feed_current_unread").innerText = feed_unread;
-					Headlines.loadMore();
-					}
-				}
+					
 					// invoke lazy load if last article in buffer is nearly visible OR is active
 					if (Article.getActive() === parseInt(last_row.getAttribute('data-article-id'))
 						|| last_row.offsetTop - 250 <= container.scrollTop + container.offsetHeight) {
