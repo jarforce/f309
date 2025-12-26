@@ -525,8 +525,7 @@ body.ttrss_main #feeds-holder {
   -webkit-overflow-scrolling: touch;
 }
 @media (max-width: 767px) {      
-      body.flat.ttrss_main #toolbar-frame #toolbar,
-      body.ttrss_main .icon-feed,
+      body.flat.ttrss_main #toolbar-frame #toolbar,      
       .cdm .header .updated,      
       body.ttrss_main #feeds-holder {
         display: none;
