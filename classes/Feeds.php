@@ -409,7 +409,7 @@ class Feeds extends Handler_Protected {
 							. __('Some feeds have update errors (click for details)') . '</a>';
 					}
 					$reply['content'] .= '<br/><br/><a class="text-muted" href="#" onclick="window.location.reload()">'
-							. __('Click here to refresh feed') . '</a>';
+							. __('Click here to Refresh for Your Browser (or just press F5 on keyboard)') . '</a>';
 					$reply['content'] .= '</span></p></div>';
 
 				}
