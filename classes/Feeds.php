@@ -374,12 +374,16 @@ class Feeds extends Handler_Protected {
 					$message = $query_error_override;
 				} else {
 					$message = match ($view_mode) {
-						'unread' => __('No unread articles found to display.'),
-						'updated' => __('No updated articles found to display.'),
-						'marked' => __('No starred articles found to display.'),
+						'unread' => "<a href='#' onclick='window.location.reload()'>" + 
+									__('No unread articles found to display.') + "</a>",
+						'updated' => "<a href='#' onclick='window.location.reload()'>" + 
+									__('No updated articles found to display.'),
+						'marked' => "<a href='#' onclick='window.location.reload()'>" + 
+									__('No starred articles found to display.'),
 						default => $feed < LABEL_BASE_INDEX ?
+							"<a href='#' onclick='window.location.reload()'>" + 
 							__('No articles found to display. You can assign articles to labels manually from article header context menu (applies to all selected articles) or use a filter.')
-							: __('No articles found to display.'),
+							: __('No articles found to display.') + "</a>",
 					};
 				}
 
