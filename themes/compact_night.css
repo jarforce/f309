@@ -526,6 +526,14 @@ body.ttrss_main #feeds-holder {
 }
 @media (max-width: 767px) {      
       body.flat.ttrss_main #toolbar-frame #toolbar,
+      body.ttrss_main .icon-feed,
+      .cdm .header .left,
+      .cdm .header .right,
+      body.ttrss_main.ttrss_index.flat div[id*="RROW"] i.material-icons,
+      body.flat.ttrss_main #headlines-frame .hl .updated,
+      body.flat.ttrss_main #headlines-frame .cdm .updated,
+      body.flat.ttrss_main #headlines-frame .hl .content,
+      body.flat.ttrss_main #headlines-frame .cdm .content,
       body.ttrss_main #feeds-holder {
         display: none;
       }
@@ -2254,6 +2262,7 @@ body.flat.ttrss_main #headlines-frame .cdm.expandable.Unread:not(.active):not(.S
 body.flat.ttrss_main #headlines-frame .hl.Unread .title,
 body.flat.ttrss_main #headlines-frame .cdm.Unread .title {
   color: #99c3ff;
+  display: block;
 }
 body.flat.ttrss_main #headlines-frame .hl.active > *,
 body.flat.ttrss_main #headlines-frame .hl.Selected > *,
