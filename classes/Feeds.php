@@ -408,6 +408,8 @@ class Feeds extends Handler_Protected {
 						$reply['content'] .= '<br/><a class="text-muted" href="#" onclick="CommonDialogs.showFeedsWithErrors(); return false">'
 							. __('Some feeds have update errors (click for details)') . '</a>';
 					}
+					$reply['content'] .= '<br/><a class="text-muted" href="#" onclick="window.location.reload()">'
+							. __('Click here to refresh feed') . '</a>';
 					$reply['content'] .= '</span></p></div>';
 
 				}
