@@ -526,8 +526,7 @@ body.ttrss_main #feeds-holder {
 }
 @media (max-width: 767px) {      
       body.flat.ttrss_main #toolbar-frame #toolbar,
-      body.ttrss_main .icon-feed, 
-      .cdm .header .right,
+      body.ttrss_main .icon-feed,       
       body.ttrss_main.ttrss_index.flat div[id*="RROW"] i.material-icons,      
       body.ttrss_main #feeds-holder {
         display: none;
