@@ -414,7 +414,7 @@ body.ttrss_main div.whiteBox {
   margin-left: 1px;
   text-align: center;
   padding: 1em 1em 0;
-  font-size: 11px;
+  font-size: 14px;
   border: 0 solid #222;
   border-bottom-width: 1px;
 }
@@ -732,13 +732,14 @@ body.ttrss_main #headlines-frame #headlines-spacer {
   margin-left: 1px;
   text-align: center;
   color: #b7b3b3;
-  font-size: 11px;
+  font-size: 14px;
 }
 body.ttrss_main #headlines-frame #headlines-spacer a,
 body.ttrss_main #headlines-frame #headlines-spacer span {
   color: #b7b3b3;
-  padding: 10px;
+  padding: 15px;
   display: block;
+  background-color: #252627;
 }
 body.ttrss_main #headlines-frame #headlines-spacer a:hover {
   color: #b87d2c;
@@ -2343,7 +2344,7 @@ body.flat.ttrss_main .dijitCheckBox:not(.dijitChecked):before {
   background: #222;
 }
 body.flat.ttrss_main .text-muted {
-  color: #999999;
+  color: #99c3ff;
 }
 body.flat.ttrss_main .dijitAccordionInnerContainerSelected .dijitAccordionTitle {
   color: white;
