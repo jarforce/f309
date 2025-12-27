@@ -1476,6 +1476,7 @@ body.ttrss_utility hr {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: initial;
 }
 .cdm.expandable .excerpt {
   white-space: nowrap;
