@@ -30,6 +30,13 @@ body.ttrss_main {
 		}
 	} */
 }
+.flat .dijitProgressBar {
+    background-color: #e0e0e0;
+    border: 0 none;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
 body.ttrss_main :focus {
   outline: none;
 }
