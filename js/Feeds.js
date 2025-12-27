@@ -2,7 +2,7 @@
 
 /* global __, App, Headlines, xhr, fox, PluginHost, Notify, fox */
 
-.const	Feeds = {
+const	Feeds = {
 	FEED_ARCHIVED: 0,
 	FEED_STARRED: -1,
 	FEED_PUBLISHED: -2,
