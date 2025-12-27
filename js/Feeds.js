@@ -318,7 +318,7 @@ const	Feeds = {
 			}, 250);
 		}
 	},
-	.activeIsCat: function() {
+	activeIsCat: function() {
 		return !!this._active_feed_is_cat;
 	},
 	getActive: function() {
