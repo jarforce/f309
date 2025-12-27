@@ -406,7 +406,7 @@ class Feeds extends Handler_Protected {
 
 					if ($num_errors > 0) {
 						$reply['content'] .= '<br/><a class="text-muted" href="#" onclick="CommonDialogs.showFeedsWithErrors(); return false">'
-							. __('List feeds errors on update') . '</a>';
+							. __('List feeds update errors') . '</a>';
 					}
 					$reply['content'] .= '<br/><br/><a class="text-muted" href="#" onclick="window.location.reload()">'
 							. __('Click to Refresh Your Browser (as press F5)') . '</a>';
