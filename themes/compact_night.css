@@ -1466,7 +1466,7 @@ body.ttrss_utility hr {
 }
 .cdm.expandable {
   background-color: #222;
-  border: 0 solid #222;
+  border: 0 solid #666;
   border-bottom-width: 1px;
 }
 .cdm.expandable > hr {
