@@ -409,6 +409,7 @@ body.ttrss_main #overlay {
 body.ttrss_main #overlay_inner {
   font-weight: bold;
   margin: 1em;
+  text-align: center;
 }
 body.ttrss_main div.whiteBox {
   margin-left: 1px;
