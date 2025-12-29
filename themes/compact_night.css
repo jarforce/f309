@@ -423,8 +423,9 @@ body.ttrss_main div.whiteBox {
   text-align: center;
   padding: 15px;
   font-size: 14px;
-  border: 0 solid #222;
+  border: 0 solid #333;
   border-bottom-width: 1px;
+  border-top-width: 1px;
   background-color: #252627;
 }
 body.ttrss_main .dijitDialog header,
