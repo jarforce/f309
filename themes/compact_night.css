@@ -425,6 +425,7 @@ body.ttrss_main div.whiteBox {
   font-size: 14px;
   border: 0 solid #222;
   border-bottom-width: 1px;
+  background-color: #252627;
 }
 body.ttrss_main .dijitDialog header,
 body.ttrss_main .dijitDialog .dlgSec,
