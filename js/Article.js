@@ -307,7 +307,7 @@ const Article = {
 							<i class="material-icons">label_outline</i>
 							${Article.renderTags(hl.id, hl.tags)}
 							&nbsp;<a title="${__("Edit tags for this article")}" href="#"
-								onclick="Article.editTags(${hl.id})">...</a>
+								onclick="Article.editTags(${hl.id})">.</a>
 							<div class="buttons right">${hl.buttons}</div>
 						</div>
 					</div>
