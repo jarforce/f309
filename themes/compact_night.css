@@ -738,7 +738,7 @@ body.ttrss_main #headlines-frame[data-is-wide-screen="true"] .hl .feed {
   display: none;
 }
 body.ttrss_main #headlines-frame #headlines-spacer {
-  margin-left: 1px;
+  margin: auto;
   text-align: center;
   color: #b7b3b3;
   font-size: 14px;
