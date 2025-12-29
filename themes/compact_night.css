@@ -2221,7 +2221,7 @@ body.flat.ttrss_main #toolbar-frame #toolbar {
   color: #e6e6e6;
 }
 body.flat.ttrss_main #feeds-holder {
-  background: #222;
+  background: #252627;
   box-shadow: inset -1px 0 2px -1px #666;
 }
 body.flat.ttrss_main #feeds-holder #feedTree .dijitTreeRow .counterNode.aux,
