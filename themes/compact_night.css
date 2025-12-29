@@ -419,9 +419,9 @@ body.ttrss_main #overlay_inner {
   text-align: center;
 }
 body.ttrss_main div.whiteBox {
-  margin-left: 1px;
+  margin-left: auto;
   text-align: center;
-  padding: 1em 1em 0;
+  padding: 15px;
   font-size: 14px;
   border: 0 solid #222;
   border-bottom-width: 1px;
