@@ -786,8 +786,9 @@ body.ttrss_main #toolbar-frame {
 }
 body.ttrss_main #toolbar-frame #toolbar {
   background: white;
-  border: 0 solid #222;
+  border: 0 solid #333;
   border-bottom-width: 1px;
+  border-top-width: 2px;
   padding-left: 4px;
   height: 32px;
   display: flex;
