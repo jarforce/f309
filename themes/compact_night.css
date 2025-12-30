@@ -2262,10 +2262,14 @@ body.flat.ttrss_main #headlines-frame {
 body.flat.ttrss_main #headlines-frame .hl:not(.active):not(.Selected):not(.Unread),
 body.flat.ttrss_main #headlines-frame .cdm.expandable:not(.active):not(.Selected):not(.Unread) {
   background: #333;
+  padding: 1px 4px 4px 1px;
+  border: 2px solid #222;
 }
 body.flat.ttrss_main #headlines-frame .hl.Unread:not(.active):not(.Selected),
 body.flat.ttrss_main #headlines-frame .cdm.expandable.Unread:not(.active):not(.Selected) {
   background: #222;
+  padding: 1px 4px 4px 1px;
+  border: 2px solid #333;
 }
 body.flat.ttrss_main #headlines-frame .hl.Unread .title,
 body.flat.ttrss_main #headlines-frame .cdm.Unread .title {
