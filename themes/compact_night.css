@@ -546,6 +546,8 @@ body.ttrss_main #feeds-holder #feedTree {
   overflow-x: hidden;
   text-rendering: optimizelegibility;
   font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 2px solid #333;
+  border-left: 5px solid #333;
 }
 body.ttrss_main #feeds-holder #feedTree .dijitTreeNode .dijitTreeRow {
   border: 1px solid transparent;
