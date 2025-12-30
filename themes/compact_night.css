@@ -37,6 +37,10 @@ body.ttrss_main {
     margin-left: auto;
     margin-right: auto;
 }
+.flat .dijitTreeIsRoot {
+    background-color: transparent;
+    border-bottom: 1px solid #333;
+}
 body.ttrss_main :focus {
   outline: none;
 }
