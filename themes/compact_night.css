@@ -759,6 +759,8 @@ body.ttrss_main #headlines-frame #headlines-spacer a:hover {
 body.ttrss_main #headlines-frame .feed-title {
   border: 0 solid #b87d2c;
   border-bottom-width: 1px; 
+  margin-left: 2px;
+  margin-right: 2px;
 }
 body.ttrss_main #headlines-frame .feed-title a.title {
   color: #b7b3b3;
