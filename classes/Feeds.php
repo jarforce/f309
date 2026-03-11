@@ -2287,6 +2287,10 @@ class Feeds extends Handler_Protected {
 			if (!$valid_keyword_processed) {
 
 				$k = trim($k);
+				// Ignore empty keywords. Do not use 'empty()' which also matches "0".
+				if ($k === '') {
+					continue;
+				}
 				$k_sql = $k;
 				if (preg_match('/\s+/', $k)) {
 					/**
