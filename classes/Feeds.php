@@ -409,7 +409,7 @@ class Feeds extends Handler_Protected {
 							. __('List update errors') . '</a>';
 					}
 					$reply['content'] .= '<br/><br/><a class="text-muted" href="#" onclick="window.location.reload()">'
-							. __('refresh your browser') . '</a>';
+							. __('Refresh your browser') . '</a>';
 					$reply['content'] .= '</span></p></div>';
 
 				}
