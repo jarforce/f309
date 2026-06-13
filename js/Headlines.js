@@ -205,7 +205,7 @@ const Headlines = {
 			});
 
 			if (feeds.length > 0) {
-				Feeds.requestCounters(feeds, labels);				
+				Feeds.requestCounters(feeds, labels);
 			}
 
 			PluginHost.run(PluginHost.HOOK_HEADLINE_MUTATIONS_SYNCED, results);
@@ -345,17 +345,18 @@ const Headlines = {
 
 				if (hsp && hsp.previousSibling) {
 					const last_row = hsp.previousSibling;
-					
+
 					// invoke lazy load if last article in buffer is nearly visible OR is active
 					if (Article.getActive() === parseInt(last_row.getAttribute('data-article-id'))
-						|| last_row.offsetTop - 2500 <= container.scrollTop + container.offsetHeight) {
+						|| last_row.offsetTop - 250 <= container.scrollTop + container.offsetHeight) {
 						hsp.innerHTML = `<span class='text-muted text-small text-center'><img class="icon-three-dots" src="${App.getInitParam('icon_three_dots')}"> ${__("Loading, please wait...")}</span>`;
 
 						Headlines.loadMore();
 						return;
 					}
 				}
-			}			
+			}
+
 			if (App.isCombinedMode() && App.getInitParam("cdm_expanded")) {
 				const container = document.getElementById("headlines-frame")
 
@@ -565,7 +566,7 @@ const Headlines = {
 									<i class="material-icons">label_outline</i>
 									${Article.renderTags(hl.id, hl.tags)}
 									<a title="${__("Edit tags for this article")}" href="#"
-										onclick="Article.editTags(${hl.id})">.</a>
+										onclick="Article.editTags(${hl.id})">(+)</a>
 									${comments}
 								</div>
 
@@ -630,7 +631,7 @@ const Headlines = {
 
 			if (feed_unread > 0 && !Element.visible("feeds-holder")) {
 				document.getElementById("feed_current_unread").innerText = feed_unread;
-				Element.show("feed_current_unread");				
+				Element.show("feed_current_unread");
 			} else {
 				Element.hide("feed_current_unread");
 			}
@@ -654,7 +655,7 @@ const Headlines = {
 				<span class='left'>
 					<a href="#" title="${__("Show as feed")}"
 						onclick='CommonDialogs.generatedFeed("${headlines.id}", ${headlines.is_cat}, ${JSON.stringify(search_query)})'>
-						<i class='pub-pic pub-70250 material-icons'>rss_feed</i>
+						<i class='icon-syndicate material-icons'>rss_feed</i>
 					</a>
 					${tb.site_url ?
 						`<a class="feed_title" target="_blank" href="${App.escapeHtml(App.sanitizeUrl(tb.site_url))}" title="${tb.last_updated}">${tb.title}</a>` :
@@ -837,9 +838,10 @@ const Headlines = {
 
 				this.initHeadlinesMenu();
 
-				if (Feeds.infscroll_disabled)					
-					hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
-						__("Open next unread") + "</a>";					
+				if (Feeds.infscroll_disabled)
+					hsp.innerHTML = "<a href='#' onclick='Feeds.openNextUnread()'>" +
+						__("Click to open next unread feed.") + "</a>";
+
 				/*
 				if (Feeds._search_query) {
 					document.getElementById("feed_title").innerHTML += "<span id='cancel_search'>" +
@@ -888,9 +890,9 @@ const Headlines = {
 
 				this.initHeadlinesMenu();
 
-				if (Feeds.infscroll_disabled) {										
-					hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
-						__("Open next unread") + "</a>";	
+				if (Feeds.infscroll_disabled) {
+					hsp.innerHTML = "<a href='#' onclick='Feeds.openNextUnread()'>" +
+						__("Click to open next unread feed.") + "</a>";
 				}
 
 			} else {
@@ -900,12 +902,12 @@ const Headlines = {
 				const hsp = document.getElementById("headlines-spacer");
 
 				if (hsp) {
-					if (first_id_changed) {						
+					if (first_id_changed) {
 						hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
-							__("Open next new") + "</a>";
+							__("New articles found, reload feed to continue.") + "</a>";
 					} else {
-						hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
-							__("Open next unread") + "</a>";
+						hsp.innerHTML = "<a href='#' onclick='Feeds.openNextUnread()'>" +
+							__("Click to open next unread feed.") + "</a>";
 					}
 				}
 			}

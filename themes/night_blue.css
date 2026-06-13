@@ -660,6 +660,21 @@ body.ttrss_main #popup-backdrop {
     overscroll-behavior-y: contain;
     overflow-x: hidden;
   }
+  body.ttrss_main .hl,
+  body.ttrss_main .cdm {
+    font-size: 16px;
+  }
+  body.ttrss_main .hl div.title a,
+  body.ttrss_main .hl .feed a,
+  body.ttrss_main .hl .author,
+  body.ttrss_main .hl .updated,
+  body.ttrss_main .cdm .header a.title,
+  body.ttrss_main .cdm .header .feed,
+  body.ttrss_main .cdm .header .author,
+  body.ttrss_main .cdm .header .updated,
+  body.ttrss_main .cdm .excerpt {
+    font-size: 16px;
+  }
   body.ttrss_main #feeds-holder_splitter {
     display: none ! important;
   }
@@ -775,6 +790,15 @@ body.ttrss_main .hl-swipe-action.ready {
 body.ttrss_main .hl-swipe-action .material-icons {
   font-size: 26px;
 }
+@media (pointer: coarse) {
+  body.ttrss_main .hlMenuAttach,
+  body.ttrss_main .vfeedMenuAttach,
+  body.ttrss_main #headlines-frame .feed-title,
+  body.ttrss_main #feeds-holder .dijitTreeRow {
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
 @media (max-width: 768px) {
   body.ttrss_main .hl,
   body.ttrss_main .cdm .header {
@@ -784,6 +808,20 @@ body.ttrss_main .hl-swipe-action .material-icons {
   body.ttrss_main .cdm .header > .titleWrap {
     flex-basis: 100%;
     order: -1;
+  }
+  body.ttrss_main .hl > .title,
+  body.ttrss_main .cdm.expandable:not(.active) .header > .titleWrap {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    white-space: normal;
+    padding-bottom: 0;
+    margin-bottom: 4px;
+  }
+  body.ttrss_main .cdm.expandable:not(.active) .header > .titleWrap .excerpt {
+    white-space: normal;
   }
   body.ttrss_main .hl > .right,
   body.ttrss_main .cdm .header > .right {
