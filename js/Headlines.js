@@ -205,7 +205,7 @@ const Headlines = {
 			});
 
 			if (feeds.length > 0) {
-				Feeds.requestCounters(feeds, labels);
+				Feeds.requestCounters(feeds, labels);				
 			}
 
 			PluginHost.run(PluginHost.HOOK_HEADLINE_MUTATIONS_SYNCED, results);
@@ -345,18 +345,17 @@ const Headlines = {
 
 				if (hsp && hsp.previousSibling) {
 					const last_row = hsp.previousSibling;
-
+					
 					// invoke lazy load if last article in buffer is nearly visible OR is active
 					if (Article.getActive() === parseInt(last_row.getAttribute('data-article-id'))
-						|| last_row.offsetTop - 250 <= container.scrollTop + container.offsetHeight) {
+						|| last_row.offsetTop - 2500 <= container.scrollTop + container.offsetHeight) {
 						hsp.innerHTML = `<span class='text-muted text-small text-center'><img class="icon-three-dots" src="${App.getInitParam('icon_three_dots')}"> ${__("Loading, please wait...")}</span>`;
 
 						Headlines.loadMore();
 						return;
 					}
 				}
-			}
-
+			}			
 			if (App.isCombinedMode() && App.getInitParam("cdm_expanded")) {
 				const container = document.getElementById("headlines-frame")
 
@@ -410,11 +409,6 @@ const Headlines = {
 		// TODO: wrap headline elements into a knockoutjs model to prevent all this stuff
 		Headlines.setCommonClasses(this.headlines.filter((h) => h.id).length);
 
-		// replaceChild() below detaches every existing row; release their widgets
-		// and observers first so they don't leak (see teardownRows). render() and
-		// the re-observe calls at the end of this function repopulate them.
-		Headlines.teardownRows();
-
 		document.querySelectorAll('#headlines-frame > div[id*=RROW]').forEach((row) => {
 			const id = parseInt(row.getAttribute('data-article-id'));
 			const hl = this.headlines[id];
@@ -454,21 +448,6 @@ const Headlines = {
 		dijit.byId('main').resize();
 
 		PluginHost.run(PluginHost.HOOK_HEADLINES_RENDERED);
-	},
-	// Destroy the widgets inside the current headline rows and disconnect the
-	// per-row observers, so the detached rows can be garbage-collected. Callers
-	// rebuild and re-observe the rows immediately afterwards. Without this,
-	// replacing the list (feed switch, view-mode change) leaks each row's dijit
-	// CheckBox widget (pinned by dijit.registry) plus every row the
-	// MutationObserver still references — DOM nodes and listeners then grow
-	// unbounded across navigation.
-	teardownRows: function () {
-		dijit.registry.findWidgets(document.getElementById("headlines-frame"))
-			.forEach((w) => w.destroyRecursive());
-		this.row_observer.disconnect();
-		this.sticky_header_observer.disconnect();
-		this.sticky_content_observer.disconnect();
-		this.unpack_observer.disconnect();
 	},
 	render: function (headlines, hl) {
 		let row = null;
@@ -566,7 +545,7 @@ const Headlines = {
 									<i class="material-icons">label_outline</i>
 									${Article.renderTags(hl.id, hl.tags)}
 									<a title="${__("Edit tags for this article")}" href="#"
-										onclick="Article.editTags(${hl.id})">(+)</a>
+										onclick="Article.editTags(${hl.id})">.</a>
 									${comments}
 								</div>
 
@@ -631,7 +610,7 @@ const Headlines = {
 
 			if (feed_unread > 0 && !Element.visible("feeds-holder")) {
 				document.getElementById("feed_current_unread").innerText = feed_unread;
-				Element.show("feed_current_unread");
+				Element.show("feed_current_unread");				
 			} else {
 				Element.hide("feed_current_unread");
 			}
@@ -655,7 +634,7 @@ const Headlines = {
 				<span class='left'>
 					<a href="#" title="${__("Show as feed")}"
 						onclick='CommonDialogs.generatedFeed("${headlines.id}", ${headlines.is_cat}, ${JSON.stringify(search_query)})'>
-						<i class='icon-syndicate material-icons'>rss_feed</i>
+						<i class='pub-pic pub-70250 material-icons'>rss_feed</i>
 					</a>
 					${tb.site_url ?
 						`<a class="feed_title" target="_blank" href="${App.escapeHtml(App.sanitizeUrl(tb.site_url))}" title="${tb.last_updated}">${tb.title}</a>` :
@@ -805,11 +784,6 @@ const Headlines = {
 
 				Headlines.renderToolbar(reply['headlines']);
 
-				// Release the outgoing rows before innerHTML detaches them below;
-				// otherwise their widgets/observers leak (see teardownRows). The new
-				// rows are re-created and re-observed by render()/onLoaded afterwards.
-				Headlines.teardownRows();
-
 				if (typeof reply['headlines']['content'] === 'string') {
 					document.getElementById("headlines-frame").innerHTML = reply['headlines']['content'];
 				} else {
@@ -838,10 +812,9 @@ const Headlines = {
 
 				this.initHeadlinesMenu();
 
-				if (Feeds.infscroll_disabled)
-					hsp.innerHTML = "<a href='#' onclick='Feeds.openNextUnread()'>" +
-						__("Click to open next unread feed.") + "</a>";
-
+				if (Feeds.infscroll_disabled)					
+					hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
+						__("Open next unread") + "</a>";					
 				/*
 				if (Feeds._search_query) {
 					document.getElementById("feed_title").innerHTML += "<span id='cancel_search'>" +
@@ -890,9 +863,9 @@ const Headlines = {
 
 				this.initHeadlinesMenu();
 
-				if (Feeds.infscroll_disabled) {
-					hsp.innerHTML = "<a href='#' onclick='Feeds.openNextUnread()'>" +
-						__("Click to open next unread feed.") + "</a>";
+				if (Feeds.infscroll_disabled) {										
+					hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
+						__("Open next unread") + "</a>";	
 				}
 
 			} else {
@@ -902,12 +875,12 @@ const Headlines = {
 				const hsp = document.getElementById("headlines-spacer");
 
 				if (hsp) {
-					if (first_id_changed) {
+					if (first_id_changed) {						
 						hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
-							__("New articles found, reload feed to continue.") + "</a>";
+							__("Open next new") + "</a>";
 					} else {
-						hsp.innerHTML = "<a href='#' onclick='Feeds.openNextUnread()'>" +
-							__("Click to open next unread feed.") + "</a>";
+						hsp.innerHTML = "<a href='#' onclick='Feeds.reloadCurrent()'>" +
+							__("Open next unread") + "</a>";
 					}
 				}
 			}
@@ -1374,7 +1347,7 @@ const Headlines = {
 				this.headlines[data.id].tags = data.tags;
 			}
 
-			document.querySelectorAll(`span[data-tags-for="${data.id}"]`).forEach((ctr) => {
+			document.querySelectorAll(`span[data-tags-for="${data.id}"`).forEach((ctr) => {
 				ctr.innerHTML = Article.renderTags(data.id, data.tags);
 			});
 		}
@@ -1608,7 +1581,7 @@ const Headlines = {
 			const menu = new dijit.Menu({
 				id: "headlinesFeedTitleMenu",
 				targetNodeIds: ["headlines-frame"],
-				selector: "div.feed-title"
+				selector: "div.cdmFeedTitle"
 			});
 
 			menu.addChild(new dijit.MenuItem({
