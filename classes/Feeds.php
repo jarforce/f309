@@ -406,10 +406,8 @@ class Feeds extends Handler_Protected {
 
 					if ($num_errors > 0) {
 						$reply['content'] .= '<br/><a class="text-muted" href="#" onclick="CommonDialogs.showFeedsWithErrors(); return false">'
-							. __('List update errors') . '</a>';
+							. __('Some feeds have update errors (click for details)') . '</a>';
 					}
-					$reply['content'] .= '<br/><br/><a class="text-muted" href="#" onclick="window.location.reload()">'
-							. __('Refresh your browser') . '</a>';
 					$reply['content'] .= '</span></p></div>';
 
 				}
