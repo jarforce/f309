@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tiny Tiny RSS : <?= __("Preferences") ?></title>
+	<title>F309 : <?= __("Preferences") ?></title>
     <meta name="viewport" content="initial-scale=1,width=device-width" />
 
 	<?php if ($_SESSION["uid"] && empty($_SESSION["safe_mode"])) {
@@ -174,7 +174,7 @@
         ?>
         </div>
 		<div id="footer" dojoType="dijit.layout.ContentPane" region="bottom">
-			<a class="text-muted" target="_blank" href="https://github.com/tt-rss/tt-rss">Tiny Tiny RSS</a>
+			<a class="text-muted" target="_blank" href="https://github.com/tt-rss/tt-rss">F309</a>
 				<span>v<?= Config::get_version_html() ?></span>
     </div>
 </div>
