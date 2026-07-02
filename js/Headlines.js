@@ -408,10 +408,6 @@ const Headlines = {
 	renderAgain: function () {
 		// TODO: wrap headline elements into a knockoutjs model to prevent all this stuff
 		Headlines.setCommonClasses(this.headlines.filter((h) => h.id).length);
-		// replaceChild() below detaches every existing row; release their widgets
-		// and observers first so they don't leak (see teardownRows). render() and
-		// the re-observe calls at the end of this function repopulate them.
-		Headlines.teardownRows();
 
 		document.querySelectorAll('#headlines-frame > div[id*=RROW]').forEach((row) => {
 			const id = parseInt(row.getAttribute('data-article-id'));
@@ -453,21 +449,6 @@ const Headlines = {
 
 		PluginHost.run(PluginHost.HOOK_HEADLINES_RENDERED);
 	},
-	// Destroy the widgets inside the current headline rows and disconnect the
-	// per-row observers, so the detached rows can be garbage-collected. Callers
-	// rebuild and re-observe the rows immediately afterwards. Without this,
-	// replacing the list (feed switch, view-mode change) leaks each row's dijit
-	// CheckBox widget (pinned by dijit.registry) plus every row the
-	// MutationObserver still references — DOM nodes and listeners then grow
-	// unbounded across navigation.
-	teardownRows: function () {
-		dijit.registry.findWidgets(document.getElementById("headlines-frame"))
-			.forEach((w) => w.destroyRecursive());
-		this.row_observer.disconnect();
-		this.sticky_header_observer.disconnect();
-		this.sticky_content_observer.disconnect();
-		this.unpack_observer.disconnect();
-	},
 	render: function (headlines, hl) {
 		let row = null;
 
@@ -495,8 +476,7 @@ const Headlines = {
 
 			this.vgroup_last_feed = hl.feed_id;
 		}
-		let row;
-		
+
 		if (App.isCombinedMode()) {
 			row_class += App.getInitParam("cdm_expanded") ? " expanded" : " expandable";
 
@@ -754,8 +734,8 @@ const Headlines = {
 		);
 	},
 	onLoaded: function (reply, offset, append) {
-		let is_cat;
-		let feed_id;
+		let is_cat = false;
+		let feed_id = false;
 
 		if (reply) {
 
@@ -803,10 +783,6 @@ const Headlines = {
 					{parseContent: true});*/
 
 				Headlines.renderToolbar(reply['headlines']);
-				// Release the outgoing rows before innerHTML detaches them below;
-				// otherwise their widgets/observers leak (see teardownRows). The new
-				// rows are re-created and re-observed by render()/onLoaded afterwards.
-				Headlines.teardownRows();
 
 				if (typeof reply['headlines']['content'] === 'string') {
 					document.getElementById("headlines-frame").innerHTML = reply['headlines']['content'];
@@ -1384,7 +1360,7 @@ const Headlines = {
 					this.headlines[row.id].labels = row.labels;
 				}
 
-				document.querySelectorAll(`span[data-tags-for="${data.id}"]`).forEach((ctr) => {
+				document.querySelectorAll(`span[data-labels-for="${row.id}"]`).forEach((ctr) => {
 					ctr.innerHTML = Article.renderLabels(row.id, row.labels);
 				});
 			});
@@ -1605,7 +1581,7 @@ const Headlines = {
 			const menu = new dijit.Menu({
 				id: "headlinesFeedTitleMenu",
 				targetNodeIds: ["headlines-frame"],
-				selector: "div.feed-title"
+				selector: "div.cdmFeedTitle"
 			});
 
 			menu.addChild(new dijit.MenuItem({
