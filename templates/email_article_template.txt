@@ -12,5 +12,5 @@ Thought I'd share the following with you:
 <!-- $EndBlock article -->
 
 -- 
-Sent by Tiny Tiny RSS mailer daemon at ${TTRSS_HOST}.
+Sent by F309 mailer daemon at ${TTRSS_HOST}.
 <!-- $EndBlock email -->

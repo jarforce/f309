@@ -44,7 +44,7 @@ class Auth_Internal extends Auth_Base implements IAuthModule2 {
 					<!DOCTYPE html>
 					<html>
 						<head>
-							<title>Tiny Tiny RSS</title>
+							<title>F309</title>
 							<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 							<?php foreach (["lib/dojo/dojo.js",
 								"lib/dojo/tt-rss-layer.js",

@@ -94,7 +94,7 @@ class Bookmarklets extends Plugin {
 						<?= __("Subscribe") ?>
 					</button>
 
-					<a href="index.php"><?= __("Return to Tiny Tiny RSS") ?></a>
+					<a href="index.php"><?= __("Return to F309") ?></a>
 				</form>
 				<?php
 			} else {
@@ -139,7 +139,7 @@ class Bookmarklets extends Plugin {
 						</fieldset>
 
 						<button class='alt-primary' dojoType='dijit.form.Button' type='submit'><?= __("Subscribe to selected feed") ?></button>
-						<a href='index.php'><?= __("Return to Tiny Tiny RSS") ?></a>
+						<a href='index.php'><?= __("Return to F309") ?></a>
 					</form>
 					<?php
 				}
@@ -153,12 +153,12 @@ class Bookmarklets extends Plugin {
 						<input type='hidden' name='method' value='editfeed'>
 						<input type='hidden' name='methodparam' value="<?= $feed_id ?>">
 						<button dojoType='dijit.form.Button' class='alt-info' type='submit'><?= __("Edit subscription options") ?></button>
-						<a href='index.php'><?= __("Return to Tiny Tiny RSS") ?></a>
+						<a href='index.php'><?= __("Return to F309") ?></a>
 					</form>
 					<?php
 				} else if (!$feed_urls) {
 					?>
-					<a href='index.php'><?= __("Return to Tiny Tiny RSS") ?></a>
+					<a href='index.php'><?= __("Return to F309") ?></a>
 					<?php
 				}
 			}
@@ -183,7 +183,7 @@ class Bookmarklets extends Plugin {
 		<!DOCTYPE html>
 		<html>
 		<head>
-			<title><?= __("Share with Tiny Tiny RSS") ?></title>
+			<title><?= __("Share with F309") ?></title>
 			<?= javascript_tag("lib/dojo/dojo.js") ?>
 			<?= javascript_tag("js/utility.js") ?>
 			<?= javascript_tag("js/common.js") ?>
@@ -345,7 +345,7 @@ class Bookmarklets extends Plugin {
 			$bm_subscribe_url = $this->host->get_public_method_url($this, "subscribe");
 			$bm_share_url = $this->host->get_public_method_url($this, "sharepopup");
 
-			$confirm_str = str_replace("'", "\'", __('Subscribe to %s in Tiny Tiny RSS?'));
+			$confirm_str = str_replace("'", "\'", __('Subscribe to %s in F309?'));
 
 			$bm_subscribe_url = htmlspecialchars("javascript:{if(confirm('$confirm_str'.replace('%s',window.location.href)))window.location.href='$bm_subscribe_url&feed_url='+encodeURIComponent(window.location.href)}");
 			$bm_share_url = htmlspecialchars("javascript:(function(){var d=document,w=window,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='$bm_share_url',l=d.location,e=encodeURIComponent,g=f+'&title='+((e(s))?e(s):e(document.title))+'&url='+e(l.href);function a(){if(!w.open(g,'t','toolbar=0,resizable=0,scrollbars=1,status=1,width=500,height=250')){l.href=g;}}a();})()");
@@ -357,13 +357,13 @@ class Bookmarklets extends Plugin {
 			<h3><?= __("Drag the link below to your browser toolbar, open the feed you're interested in in your browser and click on the link to subscribe to it.") ?></h3>
 
 			<label class='dijitButton'>
-				<a href="<?= $bm_subscribe_url ?>"><?= __('Subscribe in Tiny Tiny RSS') ?></a>
+				<a href="<?= $bm_subscribe_url ?>"><?= __('Subscribe in F309') ?></a>
 			</label>
 
-			<h3><?= __("Use this bookmarklet to publish arbitrary pages using Tiny Tiny RSS") ?></h3>
+			<h3><?= __("Use this bookmarklet to publish arbitrary pages using F309") ?></h3>
 
 			<label class='dijitButton'>
-				<a href="<?= $bm_share_url ?>"><?= __('Share with Tiny Tiny RSS') ?></a>
+				<a href="<?= $bm_share_url ?>"><?= __('Share with F309') ?></a>
 			</label>
 
 			<?= \Controls\button_tag(\Controls\icon("help") . " " . __("More info..."), "",

@@ -1,7 +1,7 @@
 Contributing
 ============
 
-Thanks for your interest in contributing to the Tiny Tiny RSS (tt-rss) project!  Contributions are welcome.
+Thanks for your interest in contributing to the F309 (tt-rss) project!  Contributions are welcome.
 
 Here are some ideas to get you started:
 

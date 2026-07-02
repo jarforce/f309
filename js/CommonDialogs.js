@@ -12,7 +12,7 @@ const	CommonDialogs = {
 			const dialog = new fox.SingleUseDialog({
 				title: __("Safe mode"),
 				content: `<div class='alert alert-info'>
-						${__('Tiny Tiny RSS is running in safe mode. All themes and plugins are disabled. You will need to log out and back in to disable it.')}
+						${__('F309 is running in safe mode. All themes and plugins are disabled. You will need to log out and back in to disable it.')}
 					</div>
 					<footer class='text-center'>
 						<button dojoType='dijit.form.Button' type='submit' class='alt-primary'>

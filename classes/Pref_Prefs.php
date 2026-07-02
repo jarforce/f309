@@ -953,7 +953,7 @@ class Pref_Prefs extends Handler_Protected {
 		if ($secret && $login) {
 			$qrcode = new \chillerlan\QRCode\QRCode();
 
-			$otpurl = "otpauth://totp/".urlencode($login)."?secret=$secret&issuer=".urlencode("Tiny Tiny RSS");
+			$otpurl = "otpauth://totp/".urlencode($login)."?secret=$secret&issuer=".urlencode("F309");
 
 			return $qrcode->render($otpurl);
 		}

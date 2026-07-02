@@ -1,7 +1,7 @@
-Tiny Tiny RSS (tt-rss)
+F309 (tt-rss)
 ======================
 
-Tiny Tiny RSS (tt-rss) is a free, flexible, open-source, web-based news feed (RSS/Atom/other) reader and aggregator.
+F309 (tt-rss) is a free, flexible, open-source, web-based news feed (RSS/Atom/other) reader and aggregator.
 
 ## Getting started
 

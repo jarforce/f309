@@ -129,7 +129,7 @@
 	$options = getopt("", $longopts);
 
 	if ($options === false || isset($options["help"]) ) {
-		print "Tiny Tiny RSS update daemon.\n\n";
+		print "F309 update daemon.\n\n";
 		print "Options:\n";
 		print "  --log FILE           - log messages to FILE\n";
 		print "  --log-level N        - log verbosity level\n";

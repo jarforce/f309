@@ -33,7 +33,7 @@ if (!class_exists('Config')) {
 		}
 		
 		public static function get_user_agent(): string {
-			return 'Tiny Tiny RSS/test (https://tt-rss.org/)';
+			return 'F309/test (https://tt-rss.org/)';
 		}
 	}
 }

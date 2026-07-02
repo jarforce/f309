@@ -136,7 +136,7 @@
 	<i class="material-icons log-alert" style="display: none"
 		 title="<?= __("Recent entries found in event log.") ?>" onclick="App.openPreferences('system')">warning</i>
 	<a id="updates-available" target="_blank" rel="noopener noreferrer" href="" style="display: none">
-		<i class="material-icons icon-new-version" title="<?= __('Updates for Tiny Tiny RSS are available.') ?>">new_releases</i>
+		<i class="material-icons icon-new-version" title="<?= __('Updates for F309 are available.') ?>">new_releases</i>
 	</a>
 	<a id="plugin-updates-available" href="prefs.php" onclick="dijit.byId('pref-tabs').selectChild(dijit.byId('prefsTab')); return false" style="display: none">
 		<i class="material-icons icon-new-version" title="<?= __('Updates for some local plugins are available.') ?>">new_releases</i>
