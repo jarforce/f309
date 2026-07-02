@@ -449,6 +449,21 @@ const Headlines = {
 
 		PluginHost.run(PluginHost.HOOK_HEADLINES_RENDERED);
 	},
+	// Destroy the widgets inside the current headline rows and disconnect the
+	// per-row observers, so the detached rows can be garbage-collected. Callers
+	// rebuild and re-observe the rows immediately afterwards. Without this,
+	// replacing the list (feed switch, view-mode change) leaks each row's dijit
+	// CheckBox widget (pinned by dijit.registry) plus every row the
+	// MutationObserver still references — DOM nodes and listeners then grow
+	// unbounded across navigation.
+	teardownRows: function () {
+		dijit.registry.findWidgets(document.getElementById("headlines-frame"))
+			.forEach((w) => w.destroyRecursive());
+		this.row_observer.disconnect();
+		this.sticky_header_observer.disconnect();
+		this.sticky_content_observer.disconnect();
+		this.unpack_observer.disconnect();
+	},
 	render: function (headlines, hl) {
 		let row = null;
 
