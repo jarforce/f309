@@ -176,7 +176,7 @@
 							title="<?= __("Recent entries found in event log.") ?>">warning</i>
 
 						<a id="updates-available" target="_blank" rel="noopener noreferrer" href="" style="display: none; order: 5">
-							<i class="material-icons icon-new-version" title="<?= __('Updates for Tiny Tiny RSS are available.') ?>">new_releases</i>
+							<i class="material-icons icon-new-version" title="<?= __('Updates for F309 are available.') ?>">new_releases</i>
 						</a>
 
 						<a id="plugin-updates-available" href="prefs.php?tab=prefs" style="display: none; order: 5">
