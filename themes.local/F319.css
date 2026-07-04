@@ -546,13 +546,12 @@ body.ttrss_main #popup-backdrop {
   display: none;
 }
 @media (max-width: 768px) {
+  .pub-pic pub-70250.material-icons,
   .material-icons.icon-score {
     display: none;
   }
   body.ttrss_main .sidebar-toggle {
-    display: inline-block;
-    width: 28px;
-    height: 28px;
+    display: inline-block;    
     margin: 0 4px;
     vertical-align: middle;
     user-select: none;
