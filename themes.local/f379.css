@@ -560,6 +560,9 @@ body.ttrss_main #feeds-holder {
     padding-bottom: 0;
     margin-bottom: 4px;
   }
+  body.ttrss_main .cdm.expandable:not(.active) .header > .titleWrap .excerpt {
+    white-space: normal;
+  }
 }
 body.ttrss_main #feeds-holder #feedTree {
   height: 100%;
