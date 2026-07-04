@@ -546,6 +546,9 @@ body.ttrss_main #popup-backdrop {
   display: none;
 }
 @media (max-width: 768px) {
+  .material-icons.icon-score {
+    display: none;
+  }
   body.ttrss_main .sidebar-toggle {
     display: inline-block;
     width: 28px;
