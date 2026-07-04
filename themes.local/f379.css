@@ -544,12 +544,12 @@ body.ttrss_main #feeds-holder {
   body.ttrss_main .cdm .header {
     flex-wrap: wrap;
   }
-  body.ttrss_main .hl > .title,
+  /*body.ttrss_main .hl > .title,*/
   body.ttrss_main .cdm .header > .titleWrap {
     flex-basis: 100%;
     order: -1;
   }
-  body.ttrss_main .hl > .title,
+  /*body.ttrss_main .hl > .title,*/
   body.ttrss_main .cdm.expandable:not(.active) .header > .titleWrap {
     display: -webkit-box;
     -webkit-box-orient: vertical;
