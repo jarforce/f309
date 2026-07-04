@@ -535,10 +535,10 @@ body.ttrss_main #feeds-holder {
   -webkit-overflow-scrolling: touch;
 }
 @media (max-width: 767px) {      
-      body.flat.ttrss_main #toolbar-frame #toolbar,      
+     /* body.flat.ttrss_main #toolbar-frame #toolbar,      */
       .cdm .header .updated,      
       body.ttrss_main #feeds-holder {
-        display: flex;
+        display: none;
       }
     }
 body.ttrss_main #feeds-holder #feedTree {
