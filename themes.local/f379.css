@@ -537,6 +537,8 @@ body.ttrss_main #feeds-holder {
 @media (max-width: 767px) {      
      /* body.flat.ttrss_main #toolbar-frame #toolbar,      */
       .material-icons.sidebar-toggle,
+      .dijit.dijitReset.dijitInline.dijitButton,
+      .pub-pic.pub-70250.material-icons,
       .material-icons.toggle-sidebar-label,
       .cdm .header .updated,      
       body.ttrss_main #feeds-holder {
