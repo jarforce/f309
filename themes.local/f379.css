@@ -606,9 +606,6 @@ body.ttrss_main #feeds-holder {
     z-index: 999;
   }
 }
-body.ttrss_main #feeds-holder-backdrop {
-  display: none;
-}
 body.ttrss_main #feeds-holder #feedTree {
   height: 100%;
   overflow-x: hidden;
