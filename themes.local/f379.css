@@ -574,7 +574,7 @@ body.ttrss_main #popup-backdrop {
   body.ttrss_main #feeds-holder_splitter {
     display: none ! important;
   }
-  /*body.ttrss_main #feeds-holder {
+  body.ttrss_main #feeds-holder {
     position: fixed ! important;
     left: 0 ! important;
     top: 0 ! important;
@@ -586,7 +586,7 @@ body.ttrss_main #popup-backdrop {
     transform: translateX(-100%);
     transition: transform 0.25s ease;
     will-change: transform;
-  }*/
+  }
   body.ttrss_main.feeds-drawer-open #feeds-holder {
     transform: translateX(0);
   }
