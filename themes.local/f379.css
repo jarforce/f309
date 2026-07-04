@@ -617,6 +617,15 @@ body.ttrss_main #popup-backdrop {
     z-index: 999;
   }
 }
+@media (pointer: coarse) {
+  body.ttrss_main .hlMenuAttach,
+  body.ttrss_main .vfeedMenuAttach,
+  body.ttrss_main #headlines-frame .feed-title,
+  body.ttrss_main #feeds-holder .dijitTreeRow {
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
 body.ttrss_main #feeds-holder #feedTree {
   height: 100%;
   overflow-x: hidden;
