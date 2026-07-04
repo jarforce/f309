@@ -537,6 +537,7 @@ body.ttrss_main #feeds-holder {
 @media (max-width: 767px) {      
      /* body.flat.ttrss_main #toolbar-frame #toolbar,      */
       .material-icons.sidebar-toggle,
+      .material-icons.toggle-sidebar-label,
       .cdm .header .updated,      
       body.ttrss_main #feeds-holder {
         display: none;
