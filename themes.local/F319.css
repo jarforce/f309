@@ -692,36 +692,6 @@ body.ttrss_main .hl-swipe-action .material-icons {
     -webkit-touch-callout: none;
   }
 }
-@media (max-width: 768px) {
-  body.ttrss_main .hl,
-  body.ttrss_main .cdm .header {
-    flex-wrap: wrap;
-  }
-  body.ttrss_main .hl > .title,
-  body.ttrss_main .cdm .header > .titleWrap {
-    flex-basis: 100%;
-    order: -1;
-  }
-  body.ttrss_main .hl > .title,
-  body.ttrss_main .cdm.expandable:not(.active) .header > .titleWrap {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    overflow: hidden;
-    white-space: normal;
-    padding-bottom: 0;
-    margin-bottom: 4px;
-  }
-  body.ttrss_main .cdm.expandable:not(.active) .header > .titleWrap .excerpt {
-    white-space: normal;
-  }
-  body.ttrss_main .hl,
-  body.ttrss_main .cdm .header {
-    margin-left: auto;
-    flex-wrap: wrap;
-  }
-}
 body.ttrss_main #feeds-holder #feedTree {
   height: 100%;
   overflow-x: hidden;
