@@ -553,7 +553,10 @@ body.ttrss_main #popup-backdrop {
   body.ttrss_main .hl,
   body.ttrss_main .cdm .header {
     flex-wrap: wrap;
-  }  
+  }
+  body.ttrss_main.feeds-drawer-open #feeds-holder {
+    transform: translateX(0);
+  }
   body.ttrss_main .cdm.expandable:not(.active) .header > .titleWrap {
     display: -webkit-box;
     -webkit-box-orient: vertical;
