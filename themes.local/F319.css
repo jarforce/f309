@@ -547,6 +547,7 @@ body.ttrss_main #popup-backdrop {
 }
 @media (max-width: 768px) {
   .pub-pic.pub-70250.material-icons,
+  span.updated,
   .material-icons.icon-score {
     display: none;
   }
