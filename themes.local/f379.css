@@ -538,7 +538,7 @@ body.ttrss_main #feeds-holder {
       body.flat.ttrss_main #toolbar-frame #toolbar,      
       .cdm .header .updated,      
       body.ttrss_main #feeds-holder {
-        display: none;
+        display: flex;
       }
     }
 body.ttrss_main #feeds-holder #feedTree {
