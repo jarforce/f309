@@ -642,7 +642,7 @@ const Headlines = {
 							<span class="cancel_search">(<a href="#" onclick="Feeds.cancelSearch(); return false">${__("Cancel search")}</a>)</span>` :
 								`<span class="feed_title">${tb.title}</span>`}`}
 					${tb.error ? `<i title="${App.escapeHtml(tb.error)}" class='material-icons icon-error'>error</i>` : ''}
-					<span id='feed_current_unread' style='display: none'></span>
+					<span id='feed_current_unread' style='display: yes'></span>
 				</span>
 				<span class='right'>
 					<span id='selected_prompt'></span>
