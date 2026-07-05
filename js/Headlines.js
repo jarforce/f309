@@ -645,6 +645,7 @@ const Headlines = {
 					<span id='feed_current_unread'></span>
 				</span>
 				<span class='right'>
+					<span id='feed_current_unread'></span>
 					<span id='selected_prompt'></span>
 
 					<select class='select-articles-dropdown'
