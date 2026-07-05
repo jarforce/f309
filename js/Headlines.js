@@ -636,16 +636,16 @@ const Headlines = {
 						onclick='CommonDialogs.generatedFeed("${headlines.id}", ${headlines.is_cat}, ${JSON.stringify(search_query)})'>
 						<i class='pub-pic pub-70250 material-icons'>rss_feed</i>
 					</a>
+					<span id='feed_current_unread'></span>
 					${tb.site_url ?
 						`<a class="feed_title" target="_blank" href="${App.escapeHtml(App.sanitizeUrl(tb.site_url))}" title="${tb.last_updated}">${tb.title}</a>` :
 							`${search_query ? `<a href="#" onclick="Feeds.search(); return false" class="feed_title" title="${App.escapeHtml(search_query)}">${tb.title}</a>
 							<span class="cancel_search">(<a href="#" onclick="Feeds.cancelSearch(); return false">${__("Cancel search")}</a>)</span>` :
 								`<span class="feed_title">${tb.title}</span>`}`}
 					${tb.error ? `<i title="${App.escapeHtml(tb.error)}" class='material-icons icon-error'>error</i>` : ''}
-					<span id='feed_current_unread'></span>
+					
 				</span>
-				<span class='right'>
-					<span id='feed_current_unread'></span>
+				<span class='right'>					
 					<span id='selected_prompt'></span>
 
 					<select class='select-articles-dropdown'
