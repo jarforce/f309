@@ -545,6 +545,10 @@ body.ttrss_main #feeds-holder-backdrop {
 body.ttrss_main #popup-backdrop {
   display: none;
 }
+.pub-pic.pub-70250.material-icons,
+span.feed_title {
+    display: none;
+  }
 @media (max-width: 768px) {
   .pub-pic.pub-70250.material-icons,
   span.updated,
